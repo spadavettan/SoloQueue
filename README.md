@@ -1,4 +1,3 @@
-Solo-Queue
-==========
+﻿# SoloQueue
 
-LoL stat tracking and gameplay analysis
+
