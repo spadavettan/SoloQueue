@@ -11,6 +11,7 @@ var path = require('path');
 var app = express();
 
 var apiRoute = require('./routes/api');
+var statsRoute = require('./routes/stats');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -32,6 +33,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/search', apiRoute.getData);
+app.get('/stats/:summonerid/:index', statsRoute.getData);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
