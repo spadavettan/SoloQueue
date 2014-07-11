@@ -3,10 +3,12 @@
 block content
   article.index.container
     .row
-        .col-xs-4.col-xs-offset-4
-            .panel.panel-default.push-down
+        .col-xs-8.col-xs-offset-2
+            .panel.panel-default
                 .panel-body
                     form(role='search')
                         .form-group
-                            label Summoner Name
-                            input.form-control
+                            .col-xs-10
+                                input.form-control(placeholder='Summoner Name')
+                            .col-xs-2-push
+                                a.btn.btn-main(href='#') Submit
