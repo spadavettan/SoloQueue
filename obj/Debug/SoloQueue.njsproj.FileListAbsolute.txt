@@ -1282,3 +1282,8 @@ C:\Users\Sachan Ganesh\Documents\Dev\Projects\SoloQueue\obj\Debug\node_modules\s
 C:\Users\Sachan Ganesh\Documents\Dev\Projects\SoloQueue\obj\Debug\node_modules\stylus\node_modules\sax\test\xmlns-xml-default-redefine.js
 C:\Users\Sachan Ganesh\Documents\Dev\Projects\SoloQueue\obj\Debug\node_modules\stylus\package.json
 C:\Users\Sachan Ganesh\Documents\Dev\Projects\SoloQueue\obj\Debug\node_modules\stylus\Readme.md
+C:\Users\Sayan\Documents\Visual Studio 2013\Projects\SoloQueue\obj\Debug\SoloQueue.njsprojResolveAssemblyReference.cache
+C:\Users\Sayan\Documents\Visual Studio 2013\Projects\SoloQueue\obj\Debug\app.js
+C:\Users\Sayan\Documents\Visual Studio 2013\Projects\SoloQueue\obj\Debug\routes\index.js
+C:\Users\Sayan\Documents\Visual Studio 2013\Projects\SoloQueue\obj\Debug\routes\searchRequest.js
+C:\Users\Sayan\Documents\Visual Studio 2013\Projects\SoloQueue\obj\Debug\routes\user.js

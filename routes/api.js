@@ -2,36 +2,36 @@
 
 exports.getData = function(req, res) {
 
-	var summoner = req.query.name;
-	var summonder_id;
+	var summoner_name = req.query.name;
+	var summoner_id;
 	var gameData;
+	var summoner_data;
 
 
-	unirest.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner + '?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function(res) {
-		if (res.error) {
-            
+	unirest.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function(response) {
+		if (response.error) {
             //indicate to the caller that there was an internal server error (code 500) and sent the error message
-            res.send(500, { message: res.error });
+            res.send(500, { message: response.error });
             return;
         }
-        
         else {
-            var summoner_data = JSON.parse(res.body);
-            var lowerName = summonder_id.toLowerCase();
-            summonder_id = summoner_data[lowerName].id;
+            summoner_data = response.body;
+            var lowerName = summoner_name.toLowerCase();
+            summoner_id = summoner_data[lowerName].id;
+            findData(summoner_id);
         }
-	});
+	}); 
+    
+    var findData = function (id) {
+        unirest.get('https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/' + summoner_id + '/recent?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function (response) {
+            if (response.error) {
+                res.send(500, { message: res.error });
+                return;
+            }
 
-	unirest.get(' https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/' + summonder_id + '/recent?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function(res) {
-		if (res.error) {
-			res.send(500, {message: res.error});
-			return;
-		}
-
-		else {
-			gameData = JSON.parse(res.body);
-		}
-	});
-
-	res.end(gameData);
+		    else {
+                res.send({ gameData: response.body });
+            }
+        });
+    };
 };
