@@ -34,6 +34,7 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\user.js" />
     <Content Include="package.json" />
+    <Content Include="public\stylesheets\base.css" />
     <Content Include="README.md" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
