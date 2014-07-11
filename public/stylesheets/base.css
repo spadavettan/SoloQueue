@@ -31,3 +31,38 @@
     font-family: "Roboto", serif;
 	color: #27ae60;
 }
+
+.btn-main {
+	outline: none !important;
+	border: 2px solid #27ae60;
+	background-color: transparent;
+	color: #27ae60;
+	text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+}
+
+
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active,
+.btn-main.active,
+.open > .dropdown-toggle.btn-default {
+	color: #27ae60;
+	box-shadow: none;
+}
+
+.form-group input.form-control {
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+    border-bottom: solid black 1.5px;
+	color: black;
+    background-color: transparent;
+}
+
+article {
+    margin-top: 8rem;
+}
