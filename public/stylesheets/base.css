@@ -32,26 +32,37 @@
 	color: #27ae60;
 }
 
+.btn {
+    border-radius : 0;
+}
+
 .btn-main {
 	outline: none !important;
 	border: 2px solid #27ae60;
-	background-color: transparent;
-	color: #27ae60;
+	background-color: #27ae60;
+	color: white;
 	text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
 	font-size: 1.25rem;
-	font-weight: 500;
-	padding: 0.5rem 1rem;
+	font-weight: 550;
+	padding: 0.75rem 1.15rem;
+    transition: 0.25s background-color ease-in-out,
+                0.25s color ease-in-out;
 }
-
 
 .btn-main:hover,
 .btn-main:focus,
 .btn-main:active,
 .btn-main.active,
 .open > .dropdown-toggle.btn-default {
+	background-color: white;
 	color: #27ae60;
 	box-shadow: none;
+}
+
+.panel-default {
+    border: 0;
+    box-shadow: none;
 }
 
 .form-group input.form-control {
@@ -61,8 +72,20 @@
     border-bottom: solid black 1.5px;
 	color: black;
     background-color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+h1.brand-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 5rem;
+    margin-top: 5rem;
 }
 
 article {
-    margin-top: 8rem;
+    margin-top: 5rem;
+}
+
+article.index .btn-main {
+    height: 100%;
+    width: 100%;
 }
