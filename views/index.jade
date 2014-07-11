@@ -8,9 +8,9 @@ block content
             .col-xs-8.col-xs-offset-2
                 .panel.panel-default
                     .panel-body
-                        form(role='search')
+                        form(role='search', action='/search')
                             .form-group
                                 .col-xs-4.col-xs-offset-3
-                                    input.form-control(placeholder='Summoner Name')
+                                    input.form-control#search-form(placeholder='Summoner Name', name='name', method='post')
                                 .col-xs-2
-                                    a.btn.btn-main.center(href='#') Submit
+                                    button.btn.btn-main.center#search-request Submit
