@@ -30,7 +30,7 @@ exports.getData = function(req, res) {
             }
 
 		    else {
-                res.send({ gameData: response.body });
+                res.render('stats', { title: 'Solo Queue', gameData: response.body });
             }
         });
     };
