@@ -1,0 +1,15 @@
+{
+  "name": "SoloQueue",
+  "version": "0.0.0",
+  "description": "SoloQueue",
+  "main": "app.js",
+  "author": {
+    "name": "vetri",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^3.13.0",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
