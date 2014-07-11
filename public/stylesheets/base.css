@@ -6,6 +6,20 @@
 	font-family: "Open Sans", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
 .btn {
     border-radius : 0;
 }
@@ -65,7 +79,38 @@ article {
     margin-top: 5rem;
 }
 
-article.index .btn-main {
+article.main-body .btn-main {
     height: 100%;
     width: 100%;
+}
+
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+h3.game-type {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+h4[class^='outcome'] {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+h4[class$='win'] {
+    color: #2980b9;
+}
+
+h4[class$='loss'] {
+    color: #c0392b;
 }
