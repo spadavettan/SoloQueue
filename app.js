@@ -33,7 +33,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/search', apiRoute.getData);
-app.get('/stats/:summonerid/:index', statsRoute.getData);
+app.get('/stats', statsRoute.getData);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

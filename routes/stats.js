@@ -2,8 +2,8 @@
 
 exports.getData = function (req, res) {
     
-    var summoner_name = req.params.summonerid;
-    var index = req.params.index;
+    var index = req.query.index;
+    var summoner_name = req.query.name;
     var summoner_id;
     var gameData;
     var summoner_data;
@@ -31,7 +31,7 @@ exports.getData = function (req, res) {
             }
 
 		    else {
-                res.render('game_stats', { title: 'Solo Queue', gameData: response.body.index });
+                res.render('game_stats', { title: 'Solo Queue', gameData: response.body, index: index });
             }
         });
     };

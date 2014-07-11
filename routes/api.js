@@ -30,7 +30,7 @@ exports.getData = function(req, res) {
             }
 
 		    else {
-                res.render('stats', { title: 'Solo Queue', gameData: response.body });
+                res.render('stats', { title: 'Solo Queue', gameData: response.body, name: summoner_name });
             }
         });
     };

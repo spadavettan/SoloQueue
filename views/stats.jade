@@ -18,7 +18,7 @@ block content
         each game, index in gameData.games
             .row
                 .col-xs-4.col-xs-offset-4
-                    a(href='/stats/#{gameData.summonerId}/#{index}')
+                    a(href='/stats?name=#{name}&index=#{index}')
                         .well
                             if game.subType == "RANKED_SOLO_5x5"
                                 h3.text-center.game-type Game #{index + 1}: Ranked Solo 5x5
