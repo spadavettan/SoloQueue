@@ -2,14 +2,11 @@
 
 block content
   article.index.container
-    h1 Solo Queue
-    h2 Lose better.
     .row
         .col-xs-4.col-xs-offset-4
-            .panel.panel-default
-                .panel-heading
-                    h3.panel-title Search Player Ranking
+            .panel.panel-default.push-down
                 .panel-body
-                    h3 Blank
-                .panel-footer
-                    h3 Empty
+                    form(role='search')
+                        .form-group
+                            label Summoner Name
+                            input.form-control

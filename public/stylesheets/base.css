@@ -1,0 +1,33 @@
+﻿/* Base Styles & Bootstrap Overrides */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Gentium+Basic|Oxygen:300|Open+Sans:300|Roboto:300);
+
+.OpenSans {
+	font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-default {
+	background-color: white;
+	border-color: #ecf0f1;
+}
+
+.navbar-default .btn-link,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-link {
+	font-family: "Open Sans", sans-serif;
+	color: #27ae60;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-text {
+    font-family: "Roboto", serif;
+	color: #27ae60;
+}
