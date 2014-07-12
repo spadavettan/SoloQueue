@@ -15,6 +15,7 @@ block content
                                 .col-xs-2
                                     button.btn.btn-main.center#search-request Submit
     article.stat-deep.container
+        h2.text-center.name #{name}
         .row
             .col-xs-2.col-xs-offset-2
                 h3.text-center.key Key:
@@ -51,7 +52,7 @@ block content
                     .well-bad
                         p I am sorry to say that you are a feeder. Focus on watching the map and backing off before you get ganked. Grab wards, because if you are getting camped because you're doing well in lane, that's bad, because every kill you get is a huge target for the enemy jungler. If you are an ADC, stay back in fights more and let your team soak up the damage. Same if you are a midlaner. Use your kit and stay alive.
 
-                h3.game-topic Wards Placed — #{gameData.games[index].stats.wardPlaced}
+                h3.game-topic Wards Placed — #{gameData.games[index].stats.wardPlaced || 0}
                 if gameData.games[index].stats.wardPlaced
                     if gameData.games[index].stats.wardPlaced >= 10
                         .well-good

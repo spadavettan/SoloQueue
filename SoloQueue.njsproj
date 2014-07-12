@@ -5,6 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>SoloQueue</Name>
     <RootNamespace>SoloQueue</RootNamespace>
+    <NameOfLastUsedPublishProfile>sq-bc</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -35,8 +36,11 @@
     <Compile Include="routes\searchRequest.js" />
     <Compile Include="routes\stats.js" />
     <Content Include="package.json" />
+    <Content Include="Procfile.jade" />
     <Content Include="public\stylesheets\base.css" />
     <Content Include="README.md" />
+    <Content Include="Web.config" />
+    <None Include="sq-bc.pubxml" />
     <Content Include="views\game_stats.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />

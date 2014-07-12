@@ -90,6 +90,13 @@ h2.key {
     color: black;
 }
 
+h2.name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 3rem;
+}
+
 .well {
   min-height: 20px;
   padding: 19px;

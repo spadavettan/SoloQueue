@@ -1,0 +1,183 @@
+﻿/* Base Styles & Bootstrap Overrides */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Gentium+Basic|Oxygen:300|Open+Sans:300|Roboto:300);
+
+.OpenSans {
+	font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.btn {
+    border-radius : 0;
+}
+
+.btn-main {
+	outline: none !important;
+	border: 2px solid #27ae60;
+	background-color: #27ae60;
+	color: white;
+	text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 550;
+	padding: 0.75rem 1.15rem;
+    transition: 0.25s background-color ease-in-out,
+                0.25s color ease-in-out;
+}
+
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active,
+.btn-main.active,
+.open > .dropdown-toggle.btn-default {
+	background-color: white;
+	color: #27ae60;
+	box-shadow: none;
+}
+
+.panel-default {
+    border: 0;
+    box-shadow: none;
+}
+
+.form-group input.form-control {
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+    border-bottom: solid black 1.5px;
+	color: black;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+h1.brand-title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 5rem;
+    margin-top: 5rem;
+}
+
+h2.brand-tag {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    color: #808080;
+}
+
+article {
+    margin-top: 5rem;
+}
+
+article.main-body .btn-main {
+    height: 100%;
+    width: 100%;
+}
+
+h2.key {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+h3.game-type {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+h4[class^='outcome'] {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+h4[class$='win'] {
+    color: #2980b9 !important;
+}
+
+h4[class$='loss'] {
+    color: #c0392b !important;
+}
+
+h3.key {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.3rem;    
+}
+
+h3.game-topic {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.25rem;
+    margin-top: 5rem;
+}
+
+h3.guide {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    color: #808080;
+    margin-bottom: 5rem;
+}
+
+[class^='well'] h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+[class^='well'] p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.well-good {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.well-okay {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.well-bad {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #c0392b;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
