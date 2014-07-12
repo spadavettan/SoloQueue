@@ -39,8 +39,6 @@
     <Content Include="Procfile.jade" />
     <Content Include="public\stylesheets\base.css" />
     <Content Include="README.md" />
-    <Content Include="Web.config" />
-    <None Include="sq-bc.pubxml" />
     <Content Include="views\game_stats.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
