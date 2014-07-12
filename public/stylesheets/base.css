@@ -84,6 +84,18 @@ article.main-body .btn-main {
     width: 100%;
 }
 
+h2.key {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+h2.name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 3rem;
+}
 
 .well {
   min-height: 20px;
@@ -108,9 +120,71 @@ h4[class^='outcome'] {
 }
 
 h4[class$='win'] {
-    color: #2980b9;
+    color: #2980b9 !important;
 }
 
 h4[class$='loss'] {
-    color: #c0392b;
+    color: #c0392b !important;
+}
+
+h3.key {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.3rem;    
+}
+
+h3.game-topic {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.25rem;
+    margin-top: 5rem;
+}
+
+h3.guide {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    color: #808080;
+    margin-bottom: 5rem;
+}
+
+[class^='well'] h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+[class^='well'] p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.well-good {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.well-okay {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.well-bad {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #c0392b;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }

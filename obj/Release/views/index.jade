@@ -1,0 +1,16 @@
+﻿extends layout
+
+block content
+    h1.text-center.brand-title Solo Queue
+    h2.text-center.brand-tag Lose better.
+    article.index.container
+        .row
+            .col-xs-8.col-xs-offset-2
+                .panel.panel-default
+                    .panel-body
+                        form(role='search', action='/search')
+                            .form-group
+                                .col-xs-4.col-xs-offset-3
+                                    input.form-control#search-form(placeholder='Summoner Name', name='name', method='post')
+                                .col-xs-2
+                                    button.btn.btn-main.center#search-request Submit

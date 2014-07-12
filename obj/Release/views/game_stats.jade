@@ -1,0 +1,97 @@
+﻿extends layout
+
+block content
+    h1.text-center.brand-title Solo Queue
+    h2.text-center.brand-tag Lose better.
+    article.main-body.container
+        .row
+            .col-xs-8.col-xs-offset-2
+                .panel.panel-default
+                    .panel-body
+                        form(role='search', action='/search')
+                            .form-group
+                                .col-xs-4.col-xs-offset-3
+                                    input.form-control#search-form(placeholder='Summoner Name', name='name', method='post')
+                                .col-xs-2
+                                    button.btn.btn-main.center#search-request Submit
+    article.stat-deep.container
+        .row
+            .col-xs-2.col-xs-offset-2
+                h3.text-center.key Key:
+            .col-xs-2
+                .well-good
+                    h4 Good
+            .col-xs-2
+                .well-okay
+                    h4 Average
+            .col-xs-2
+                .well-bad
+                    h4 Bad
+        .row
+            .col-xs-8.col-xs-offset-2
+                h3.game-topic Champion Level — #{gameData.games[index].stats.level} (If Game Lasted More Than 40')
+                if gameData.games[index].stats.level >= 14
+                    .well-good
+                        p Nice, you are maintaining your level or are outleveling the enemy, which is a huge advantage, especially in midgame. You are able to do things that other champions won't be able to for a while, and this can be used to snowball. Use your level to your advantage.
+                else if gameData.games[index].stats.level < 14 && gameData.games[index].stats.level >= 10
+                    .well-okay
+                        p You are doing a good job of keeping up with the pace of the game. Try and focus on farming a bit more to get those big items and exp. After ganking or roaming, just try to stay in lane and kill creeps or kill jungle camps until you see another opportunity to get a kill in the game. Levels are important, and keeping up or surpassing enemies can give you a huge advantage.
+                else if gameData.games[index].stats.level < 10
+                    .well-bad
+                        p You need exp. If you are a mid/top laner, take it as a rule of thumb that if you are a lower level than your enemy,you will 9/10 times lose a 1v1 with an enemy. That's just how it works. Don't underestimate the power of your scaling and focus on getting more exp rather than roaming the map.
+                        
+                h3.game-topic Deaths — #{gameData.games[index].stats.numDeaths}
+                if gameData.games[index].stats.numDeaths < 6
+                    .well-good
+                        p You are good at keeping yourself alive. This is probably the most obvious skill to have in the game because you'll be able to turtle the game and maintain ground when you are getting pushed in. Keep it up and tell your teammates to follow your lead so they don't die as well.
+                else if gameData.games[index].stats.numDeaths < 10 && gameData.games[index].stats.numDeaths >= 6
+                    .well-okay
+                        p You die quite a bit. Not as much as those feeders that your team blames for the loss but you still die a lot. Focus on watching the map and avoiding skillshots, specifically ones that CC you or do a ton of damage (those damn Lux snares). It'll save you and your team a lot of trouble.
+                else if gameData.games[index].stats.numDeaths >= 10
+                    .well-bad
+                        p I am sorry to say that you are a feeder. Focus on watching the map and backing off before you get ganked. Grab wards, because if you are getting camped because you're doing well in lane, that's bad, because every kill you get is a huge target for the enemy jungler. If you are an ADC, stay back in fights more and let your team soak up the damage. Same if you are a midlaner. Use your kit and stay alive.
+
+                h3.game-topic Wards Placed — #{gameData.games[index].stats.wardPlaced}
+                if gameData.games[index].stats.wardPlaced
+                    if gameData.games[index].stats.wardPlaced >= 10
+                        .well-good
+                            p Your warding is excellent. Of course, more is always better, but thus far you're doing great. Your teammates won't actively call you a blessing but really, you and your warding are the reason your team wins half the time. 
+                    else if gameData.games[index].stats.wardPlaced < 10 && gameData.games[index].stats.wardPlaced >= 5
+                        .well-okay
+                            p Your coverage is good, but it could be a bit better. Those occasions at 45 minutes when your team gets aced from an unexpected nami ult from around an unwarded corner could be avoided by an extra ward. Consider buying more, specifically later in the game.
+                    else if gameData.games[index].stats.wardPlaced < 5
+                        .well-bad
+                            p You need to buy more wards. That extra 200 gold you have when you recall can be spent on an invaluable vision ward or sight wards. You can save your team from a lot of deaths, save buffs, and secure barons with 75 gold. It may seem like a delay on your Warmog's but try it, it's worth it.
+                else
+                    .well-bad
+                        p You need to buy more wards. That extra 200 gold you have when you recall can be spent on an invaluable vision ward or sight wards. You can save your team from a lot of deaths, save buffs, and secure barons with 75 gold. It may seem like a delay on your Warmog's but try it, it's worth it.
+
+                h3.game-topic Wards Killed — #{gameData.games[index].stats.wardKilled || 0}
+                if gameData.games[index].stats.wardKilled
+                    if gameData.games[index].stats.wardKilled >= 10
+                        .well-good
+                            p The enemy support must hate you. Your destruction of enemy vision is solid and is an incredibly valuable asset for your team. You are the reason your team catches out so much of the enemy team every game. Keep pinking.
+                    else if gameData.games[index].stats.wardKilled < 10 && gameData.games[index].stats.wardKilled >= 5
+                        .well-okay
+                            p You kill quite a few wards, but there is room for improvement. An extra pink or seeker can make sure you kill that ward in the jungle that lets you catch out an AD carry who would've otherwise avoided you. You can crush the enemy team and remove their chance to win with just a few auto attacks on a ward.
+                    else if gameData.games[index].stats.wardKilled < 5
+                        .well-bad
+                            p You have to invest in more pink wards or buy a seeker totem. Wards are a huge factor in winning or losing a game. By destroying the enemy's you are leaving them blind in areas they thought they had covered, and when combined with good warding on your end, this can spell death for the enemy team.
+                else
+                    .well-bad
+                        p You have to invest in more pink wards or buy a seeker totem. Wards are a huge factor in winning or losing a game. By destroying the enemy's you are leaving them blind in areas they thought they had covered, and when combined with good warding on your end, this can spell death for the enemy team.
+
+                h3.game-topic Unused Gold — #{gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent || 0}
+                if gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent
+                    if gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent < 200
+                        .well-good
+                            p You make bank and you know how to spend it. Or you just make no money, which is bad, but if you DO happen to make bank, then you are spending it well. Your items are up to speed with your performance and are contributing to your snowballing, so keep it up.
+                    else if gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent < 800 && gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent >= 200
+                        .well-okay
+                            p You are flooding, but not too much. Focus on blowing that extra money on some wards and good vision control. That 200 gold may not seem like much, but it can be a huge gamechanger.
+                    else if gameData.games[index].stats.goldEarned - gameData.games[index].stats.goldSpent >= 800
+                        .well-bad
+                            p You are flooding way too much gold. That extra gold can be dedicated to for example, a Giant's Belt that keeps you alive and able to clean up the next fight, or it could be to that Cloak of Agility to get that pentakill with Yasuo. These items are key to outperforming the enemy, and you should be spending it as soon as you get it.
+                else
+                    .well-bad
+                        p You have to invest in more pink wards or buy a seeker totem. Wards are a huge factor in winning or losing a game. By destroying the enemy's you are leaving them blind in areas they thought they had covered, and when combined with good warding on your end, this can spell death for the enemy team.
