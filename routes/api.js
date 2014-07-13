@@ -7,6 +7,11 @@ exports.getData = function(req, res) {
 	var gameData;
 	var summoner_data;
 
+    if (summoner_name.indexOf(" ") > -1) {
+        summoner_name = summoner_name.split(" ").join("%20");
+    }
+
+    console.log('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key=26002573-ea67-4481-9b8b-25409d2022b4');
 
 	unirest.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function(response) {
 		if (response.error) {
@@ -16,7 +21,18 @@ exports.getData = function(req, res) {
         }
         else {
             summoner_data = response.body;
-            var lowerName = summoner_name.toLowerCase();
+
+            var lowerName;
+
+            if (summoner_name.indexOf("%20") > -1) {
+                lowerName = summoner_name.split("%20").join("").toLowerCase();
+                summoner_name = summoner_name.split("%20").join(" ");
+            }
+            else {
+                lowerName = summoner_name.toLowerCase();
+            }
+            console.log(lowerName);
+
             summoner_id = summoner_data[lowerName].id;
             findData(summoner_id);
         }

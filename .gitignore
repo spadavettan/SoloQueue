@@ -28,3 +28,5 @@ build/Release
 .lock-wscript
 
 config/
+
+.ntvs_analysis.dat
