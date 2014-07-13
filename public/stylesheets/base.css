@@ -84,17 +84,14 @@ article.main-body .btn-main {
     width: 100%;
 }
 
+#search-form {
+    margin-bottom: 1rem;
+}
+
 h2.key {
     font-family: "Open Sans", sans-serif;
     font-size: 3rem;
     color: black;
-}
-
-h2.name {
-    font-family: "Open Sans", sans-serif;
-    font-size: 3rem;
-    color: black;
-    margin-bottom: 3rem;
 }
 
 .well {

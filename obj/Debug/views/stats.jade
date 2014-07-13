@@ -1,0 +1,46 @@
+﻿extends layout
+
+block content
+    h1.text-center.brand-title Solo Queue
+    h2.text-center.brand-tag Lose better.
+    article.main-body.container
+        .row
+            .col-xs-8.col-xs-offset-2
+                .panel.panel-default
+                    .panel-body
+                        form(role='search', action='/search')
+                            .form-group
+                                .col-xs-4.col-xs-offset-3
+                                    input.form-control#search-form(placeholder='Summoner Name', name='name', method='post')
+                                .col-xs-2
+                                    button.btn.btn-main.center#search-request Submit
+    article.stat-body.container
+        h2.text-center.key #{name}
+        h3.text-center.guide Click On A Game To View Specific Stats
+        each game, index in gameData.games
+            .row
+                .col-xs-4.col-xs-offset-4
+                    a(href='/stats?name=#{name}&index=#{index}')
+                        .well
+                            if game.subType == "RANKED_SOLO_5x5"
+                                h3.text-center.game-type Game #{index + 1}: Ranked Solo 5x5
+                            else if game.subType == "RANKED_TEAM_5x5"
+                                h3.text-center.game-type Game #{index + 1}: Ranked Team 5x5
+                            else if game.subType == "RANKED_TEAM_3x3"
+                                h3.text-center.game-type Game #{index + 1}: Ranked Team 3x3
+                            else if game.subType == "RANKED_PREMADE_5x5"
+                                h3.text-center.game-type Game #{index + 1}: Ranked Premade 5x5
+                            else if game.subType == "RANKED_PREMADE_3x3"
+                                h3.text-center.game-type Game #{index + 1}: Ranked Premade 3x3
+                            else if game.subType == "ARAM_UNRANKED_5x5"
+                                h3.text-center.game-type Game #{index + 1}: ARAM Unranked 5x5
+                            else if game.subType == "NORMAL_3x3"
+                                h3.text-center.game-type Game #{index + 1}: Normal 3x3
+                            else if game.subType == "NORMAL"
+                                h3.text-center.game-type Game #{index + 1}: Normal
+                            else
+                                h3.text-center.game-type Game #{index + 1}: #{game.subType}
+                            if game.stats.win
+                                h4.text-center.outcome-win Win
+                            else
+                                h4.text-center.outcome-loss Loss
