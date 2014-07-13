@@ -8,7 +8,7 @@ exports.getData = function (req, res) {
     var gameData;
     var summoner_data;
     
-    if (summoner_name.index_of(" ") > -1) {
+    if (summoner_name.indexOf(" ") > -1) {
         summoner_name = summoner_name.split(" ").join("%20");
         console.log(summoner_name);
     }
