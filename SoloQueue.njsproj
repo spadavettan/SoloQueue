@@ -33,7 +33,6 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\searchRequest.js" />
     <Compile Include="routes\stats.js" />
     <Content Include="package.json" />
     <Content Include="Procfile.jade" />
