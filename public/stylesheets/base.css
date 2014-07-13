@@ -26,16 +26,13 @@ a:focus {
 
 .btn-main {
 	outline: none !important;
-	border: 2px solid #27ae60;
-	background-color: #27ae60;
+	border: 2px solid #4a89dc;
+	background-color: #4a89dc;
 	color: white;
 	text-transform: uppercase;
     font-family: "Roboto", sans-serif;
 	font-size: 1.25rem;
-	font-weight: 550;
 	padding: 0.75rem 1.15rem;
-    transition: 0.25s background-color ease-in-out,
-                0.25s color ease-in-out;
 }
 
 .btn-main:hover,
@@ -43,8 +40,7 @@ a:focus {
 .btn-main:active,
 .btn-main.active,
 .open > .dropdown-toggle.btn-default {
-	background-color: white;
-	color: #27ae60;
+    color: white;
 	box-shadow: none;
 }
 
