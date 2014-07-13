@@ -35,7 +35,6 @@
     <Compile Include="routes\index.js" />
     <Compile Include="routes\stats.js" />
     <Content Include="package.json" />
-    <Content Include="Procfile.jade" />
     <Content Include="public\stylesheets\base.css" />
     <Content Include="README.md" />
     <Content Include="views\game_stats.jade" />
