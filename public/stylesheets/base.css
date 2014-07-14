@@ -94,41 +94,35 @@ h2.key {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #2ecc71;
-  border: none;
+  background-color: transparent;
+  border: 4px solid #4a89dc;
   border-radius: 0;
   box-shadow: none;
-}
-
-#warning {
-    font-family: "Open Sans", sans-serif;
-    font-size: 2rem;
-    background-color: #e74c3c;
 }
 
 h3.game-type {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;
-    color: white;
+    color: black;
 }
 
-h4[class^='outcome'] {
+.well h5 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.5rem;
-    background-color: white;
+    font-size: 2rem !important;
+    background-color: transparent;
 }
 
-h4[class$='win'] {
-    color: #2980b9 !important;
+h5[class$='win'] {
+    color: #2ecc71 !important;
 }
 
-h4[class$='loss'] {
-    color: #c0392b !important;
+h5[class$='loss'] {
+    color: #e74c3c !important;
 }
 
 h3.key {
     font-family: "Open Sans", sans-serif;
-    font-size: 2.3rem;    
+    font-size: 2.3rem;
 }
 
 h3.game-topic {
@@ -182,8 +176,22 @@ h3.guide {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #c0392b;
+  background-color: #e74c3c;
   border: none;
   border-radius: 0;
   box-shadow: none;
+}
+
+.well-error {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.well-error h4 {
+    font-size: 2.5rem;
+  color: #e74c3c !important;
 }
