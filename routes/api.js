@@ -31,7 +31,6 @@ exports.getData = function(req, res) {
             else {
                 lowerName = summoner_name.toLowerCase();
             }
-            console.log(lowerName);
 
             summoner_id = summoner_data[lowerName].id;
             findData(summoner_id);

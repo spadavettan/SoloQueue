@@ -10,7 +10,7 @@ var path = require('path');
 
 var app = express();
 
-var apiRoute = require('./routes/api');
+var apiRoute = require('./routes/search');
 var statsRoute = require('./routes/stats');
 var favicon = require('serve-favicon');
 

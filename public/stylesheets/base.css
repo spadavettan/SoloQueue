@@ -100,6 +100,12 @@ h2.key {
   box-shadow: none;
 }
 
+#warning {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    background-color: #e74c3c;
+}
+
 h3.game-type {
     font-family: "Open Sans", sans-serif;
     font-size: 2rem;

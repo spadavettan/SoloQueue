@@ -14,54 +14,60 @@ block content
                                     input.form-control#search-form(placeholder='Summoner Name', name='name', method='post')
                                 .col-md-2
                                     button.btn.btn-main#search-request Submit
-    article.stat-body.container
-        h2.text-center.key #{name}
-        h3.text-center.guide Select A Game To View Specific Stats
-        each game, index in gameData.games
-            .row
-                .col-sm-4.col-sm-offset-4
-                    a(href='/stats?name=#{name}&index=#{index}')
-                        .well
-                            case game.subType
-                                when "RANKED_SOLO_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: Ranked Solo 5x5
-                                when "RANKED_TEAM_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: Ranked Team 5x5
-                                when "RANKED_TEAM_3x3"
-                                    h3.text-center.game-type Game #{index + 1}: Ranked Team 3x3
-                                when "RANKED_PREMADE_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: Ranked Premade 5x5
-                                when "RANKED_PREMADE_3x3"
-                                    h3.text-center.game-type Game #{index + 1}: Ranked Premade 3x3
-                                when "ARAM_UNRANKED_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: ARAM Unranked 5x5
-                                when "NORMAL_3x3"
-                                    h3.text-center.game-type Game #{index + 1}: Normal 3x3
-                                when "NORMAL"
-                                    h3.text-center.game-type Game #{index + 1}: Normal
-                                when "BOT"
-                                    h3.text-center.game-type Game #{index + 1}: Bot
-                                when "BOT_3x3"
-                                    h3.text-center.game-type Game #{index + 1}: Bot 3x3
-                                when "NONE"
-                                    h3.text-center.game-type Game #{index + 1}: None
-                                when "CAP_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: TeamBuilder 5x5
-                                when "FIRSTBLOOD_1x1"
-                                    h3.text-center.game-type Game #{index + 1}: First Blood 1x1
-                                when "FIRSTBLOOD_2x2"
-                                    h3.text-center.game-type Game #{index + 1}: First Blood 2x2
-                                when "SR_6x6"
-                                    h3.text-center.game-type Game #{index + 1}: Hexakill 6x6
-                                when "URF_BOT"
-                                    h3.text-center.game-type Game #{index + 1}: URF Bot
-                                when "ODIN_UNRANKED"
-                                    h3.text-center.game-type Game #{index + 1}: Dominion 5x5
-                                when "ONEFORALL_5x5"
-                                    h3.text-center.game-type Game #{index + 1}: One For All 5x5
-                                default
-                                    h3.text-center.game-type Game #{index + 1}: #{game.subType}
-                            if game.stats.win
-                                h4.text-center.outcome-win Win
-                            else
-                                h4.text-center.outcome-loss Loss
+    if message
+        .row
+            .col-sm-4.col-sm-offset-4
+                .well#warning
+                    h4 Summoner name does not exist!
+    else                               
+        article.stat-body.container
+            h2.text-center.key #{name}
+            h3.text-center.guide Select A Game To View Specific Stats
+            each game, index in gameData.games
+                .row
+                    .col-sm-4.col-sm-offset-4
+                        a(href='/stats?name=#{name}&index=#{index}')
+                            .well
+                                case game.subType
+                                    when "RANKED_SOLO_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: Ranked Solo 5x5
+                                    when "RANKED_TEAM_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: Ranked Team 5x5
+                                    when "RANKED_TEAM_3x3"
+                                        h3.text-center.game-type Game #{index + 1}: Ranked Team 3x3
+                                    when "RANKED_PREMADE_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: Ranked Premade 5x5
+                                    when "RANKED_PREMADE_3x3"
+                                        h3.text-center.game-type Game #{index + 1}: Ranked Premade 3x3
+                                    when "ARAM_UNRANKED_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: ARAM Unranked 5x5
+                                    when "NORMAL_3x3"
+                                        h3.text-center.game-type Game #{index + 1}: Normal 3x3
+                                    when "NORMAL"
+                                        h3.text-center.game-type Game #{index + 1}: Normal
+                                    when "BOT"
+                                        h3.text-center.game-type Game #{index + 1}: Bot
+                                    when "BOT_3x3"
+                                        h3.text-center.game-type Game #{index + 1}: Bot 3x3
+                                    when "NONE"
+                                        h3.text-center.game-type Game #{index + 1}: None
+                                    when "CAP_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: TeamBuilder 5x5
+                                    when "FIRSTBLOOD_1x1"
+                                        h3.text-center.game-type Game #{index + 1}: First Blood 1x1
+                                    when "FIRSTBLOOD_2x2"
+                                        h3.text-center.game-type Game #{index + 1}: First Blood 2x2
+                                    when "SR_6x6"
+                                        h3.text-center.game-type Game #{index + 1}: Hexakill 6x6
+                                    when "URF_BOT"
+                                        h3.text-center.game-type Game #{index + 1}: URF Bot
+                                    when "ODIN_UNRANKED"
+                                        h3.text-center.game-type Game #{index + 1}: Dominion 5x5
+                                    when "ONEFORALL_5x5"
+                                        h3.text-center.game-type Game #{index + 1}: One For All 5x5
+                                    default
+                                        h3.text-center.game-type Game #{index + 1}: #{game.subType}
+                                if game.stats.win
+                                    h4.text-center.outcome-win Win
+                                else
+                                    h4.text-center.outcome-loss Loss
