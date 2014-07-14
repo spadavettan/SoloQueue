@@ -16,8 +16,8 @@ block content
                                     button.btn.btn-main#search-request Submit
     if message
         .row
-            .col-sm-4.col-sm-offset-4
-                .well#warning
+            .col-md-4.col-md-offset-4
+                .well-error
                     h4 Summoner name does not exist!
     else                               
         article.stat-body.container
@@ -68,6 +68,6 @@ block content
                                     default
                                         h3.text-center.game-type Game #{index + 1}: #{game.subType}
                                 if game.stats.win
-                                    h4.text-center.outcome-win Win
+                                    h5.text-center.outcome-win Win
                                 else
-                                    h4.text-center.outcome-loss Loss
+                                    h5.text-center.outcome-loss Loss
