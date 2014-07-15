@@ -1,5 +1,7 @@
 ﻿var unirest = require('unirest');
 
+var secrets = require('../config/secrets');
+
 exports.getData = function (req, res) {
     
     var index = req.query.index;
@@ -13,7 +15,7 @@ exports.getData = function (req, res) {
     }
     
 
-    unirest.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key=26002573-ea67-4481-9b8b-25409d2022b4', function (response) {
+    unirest.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/' + summoner_name + '?api_key=' + secrets.apiKey, function (response) {
         if (response.error) {
             //indicate to the caller that there was an internal server error (code 500) and sent the error message
             res.render('stats', { message: response.error });
